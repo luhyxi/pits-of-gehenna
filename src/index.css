@@ -29,6 +29,11 @@ body {
   min-height: 100vh;
 }
 
+.container {
+  margin: 1rem;
+  text-align: left;
+}
+
 .nav{
   background:linear-gradient(#b30000, #680000);
   color: white;
