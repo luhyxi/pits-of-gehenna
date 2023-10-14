@@ -5,8 +5,10 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background-image: url(src/assets/public/leila.png);
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -31,7 +33,10 @@ body {
 
 .container {
   margin: 1rem;
-  text-align: left;
+  border: 5px solid;
+  border-image: url(src/assets/public/metal.jpeg) 20 / 5px / 0px stretch;
+  text-align: left ;
+  background-color: #7a1313;
 }
 
 .nav{
