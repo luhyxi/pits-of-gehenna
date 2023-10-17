@@ -1,3 +1,11 @@
+import React from "react"
+import Body from "../elements/body"
+
 export default function About(){
-    return <h1>about</h1>
+    return (
+    <div>
+        <h1>About</h1>
+        <div className="container-body"> <Body /></div>
+    </div>
+    )
 }

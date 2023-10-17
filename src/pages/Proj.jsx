@@ -1,3 +1,11 @@
+import React from "react"
+import Body from "../elements/body"
+
 export default function Proj(){
-    return <h1>proj</h1>
+    return (
+    <div>
+        <h1>Projects</h1>
+        <div className="container-body"> <Body /></div>
+    </div>
+    )
 }
