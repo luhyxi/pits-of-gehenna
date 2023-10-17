@@ -5,7 +5,10 @@ export default function About(){
     return (
     <div>
         <h1>About</h1>
-        <div className="container-body"> <Body /></div>
+        <div className="container-body"> 
+            <Body>
+            </Body>
+        </div>
     </div>
     )
 }

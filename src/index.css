@@ -1,5 +1,17 @@
+@font-face {
+  font-family: 'JMH';
+  src: url('assets/fonts/jmh-cthulhumbus.ttf') format('truetype');
+  /* Add more src declarations for different font file formats if needed */
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('assets/fonts/Merriweather-Black.ttf') format('truetype');
+  /* Add more src declarations for different font file formats if needed */
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: JMH, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -26,9 +38,10 @@ a:hover {
 }
 
 body {
+  font-family: 'Merriweather', sans-serif;
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100px;
 }
 
 .container {
@@ -49,13 +62,17 @@ body {
 }
 
 .bigger {
+  border: 5px solid;
+  border-image: url(src/assets/public/metal.jpeg) 20 / 5px / 0px stretch;
   width: 350px; /* Adjust the width as needed */
   height: 450px; /* Adjust the height as needed */
 }
 
 .small {
-  padding: 0.5rem;
-  padding-left: 1rem;
+  padding: 0.2rem;
+  padding-left:0.5rem;
+  height: 81px;
+  width: 87px;
 }
 .nav{
   background:linear-gradient(#b30000, #680000);
@@ -66,6 +83,19 @@ body {
   gap: 2rem;
   padding: 0 1rem;
 }
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+}
+
+.column {
+  padding: 0rem;
+  padding-right: 2rem;
+}
+
 
 .site-title{
   font-size: 1.5rem;
@@ -95,6 +125,7 @@ body {
 
 
 h1 {
+  font-family: 'JMH', sans-serif;
   padding: 0;
   padding-left: 1rem;
   font-size: 2.6em;
