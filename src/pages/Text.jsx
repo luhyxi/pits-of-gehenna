@@ -1,11 +1,20 @@
 import React from "react"
 import Body from "../elements/body"
+import customImage from "../assets/public/emo.jpg"
 
-export default function Text(){
-    return (
-    <div>
-        <h1>Text</h1>
-        <div className="container-body"> <Body /></div>
-    </div>
-    )
+function Text() {
+    const customContent = (
+        <>
+            <p>Hello!</p>
+        </>
+        )
+    
+        return(
+            <div>
+                <h1>Texts</h1>
+                <div className="container-body"><Body image = {customImage} content={customContent} /> </div>
+            </div>
+        )
 }
+
+export default Text;
