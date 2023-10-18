@@ -6,4 +6,5 @@ New blog for philosophy stuff, mostly studies and meditations I guess, it's cool
 - Vite & React
 
 ## TODO:
-() - Add new body image for each page
+[X] - Add new body image for each page
+[ ] - Make a the rest of the texts
