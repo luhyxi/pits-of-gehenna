@@ -1,0 +1,29 @@
+@import url("../App.css");
+
+/* Home.css */
+.welcome-section {
+    text-align: center;
+    margin: 30px auto;
+  }
+  
+  .welcome-text {
+    font-size: 1.2rem;
+    display: inline;
+  }
+  
+  .site-name {
+    font-family: 'JMH';
+    font-size: 1.4rem;
+    color: #ff00c3;
+    display: inline;
+  }
+  
+  .study-section {
+    text-align: center;
+    font-family: 'JMH';
+  }
+  
+  .study-topic {
+    color: #cfcdca;
+    margin: 10px 0;
+  } 
