@@ -17,7 +17,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url(src/assets/public/leila.png);
+  background-image: url(./assets/public/leila.png);
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
@@ -47,7 +47,7 @@ body {
 .container {
   margin: 1rem;
   border: 5px solid;
-  border-image: url(src/assets/public/metal.jpeg) 20 / 5px / 0px stretch;
+  border-image: url(./assets/public/metal.jpeg) 20 / 5px / 0px stretch;
   text-align: left ;
   background-color: #7a1313;
 }
@@ -55,7 +55,7 @@ body {
 .container-body{
   border: 0px solid;
   border-left: 0px;
-  border-image: url(src/assets/public/metal.jpeg) 20 / 5px / 5px stretch;
+  border-image: url(./assets/public/metal.jpeg) 20 / 5px / 5px stretch;
   border-image-slice: 5 0;
   text-align: left ;
   background-color: #7a1313;
@@ -71,7 +71,7 @@ body {
 
 .body-image {
   border: 5px solid;
-  border-image: url(src/assets/public/metal.jpeg) 20 / 5px / 0px stretch;
+  border-image: url(./assets/public/metal.jpeg) 20 / 5px / 0px stretch;
   width: 350px; /* Adjust the width as needed */
   height: 450px; /* Adjust the height as needed */
 }
