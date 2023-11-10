@@ -22,7 +22,7 @@ function App() {
         </Routes>
       </div>
       
-
+      /* Adicionar algo aqui? */
       
       <div className='container'>
         <Footer />
