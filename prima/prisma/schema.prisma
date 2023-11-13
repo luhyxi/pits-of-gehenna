@@ -6,13 +6,27 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+  // url      = "postgresql://postgres01:postgres@localhost:5432/mydb?schema=public"
 }
 
 model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean @default(false)
+  id        String    @id @default(uuid()) //uuid gera um novo ID por input
+  title     String    @unique
+  content   String?   //insert path in content
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  published Boolean   @default(false)
+
+  users User[]
+}
+
+model User {
+  id        String    @id @default(uuid())
+  name      String    @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  posts Post[]
 }
