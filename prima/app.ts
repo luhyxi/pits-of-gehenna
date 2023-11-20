@@ -22,7 +22,7 @@ app.post("/users", async (req, res) => { // Post user block
         },
       })
       res.json(newUser)
-    } catch (error: any) { // -Bloco Catch
+    } catch (error: any) { // Bloco Catch
       console.log(error.message)
       res.status(500).json({
         message: "Internal Server Error",})}
@@ -34,7 +34,7 @@ app.get("/users", async (req, res) => { //Get all users
         const users = await prisma.user.findMany()
 
         res.json(users)
-    } catch (error) { // -Bloco catch
+    } catch (error) { // Bloco catch
         res.status(500).json({
         message: "Something went wrong",})}
 })
@@ -45,9 +45,52 @@ app.get("/users", async (req, res) => { // Get all posts FROM user
         include: { posts: true,},
     })
       res.json(users)
-    } catch (error) { //Bloco catch
+    } catch (error) { // Bloco catch
       res.status(500).json({
         message: "Something went wrong",})}
+})
+
+app.put("/users/:id", async (req, res) => { //Bloco put, adiciona posts a um user
+  try {
+    const { name, posts } = req.body
+    const { id } = req.params
+
+    const updatedUser = await prisma.user.update({
+      where: {
+        id,
+      }, data: {
+        name,
+        posts: {
+          connectOrCreate: posts.map((post: string) => ({
+            where: { title: post },
+            create: { title: post },
+          })),
+        },
+      },
+    })
+    res.json(updatedUser)
+  } catch (error) { // Bloco catch!!!
+    res.status(500).json({
+      message: "Something went wrong",
+    })
+  }
+})
+
+app.delete("/users/:id", async (req, res) => {
+  try {
+    const { id } = req.params
+
+    const deletedUser = await prisma.user.delete({
+      where: {
+        id,
+      },
+    })
+    res.json(deletedUser)
+  } catch (error) { // Bloco catch
+    res.status(500).json({
+      message: "Something went wrong",
+    })
+  }
 })
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
